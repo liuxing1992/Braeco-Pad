@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:id="@+id/shop"
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/toolbar_black"
+        android:clickable="true"
+        >
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/pig_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            android:src="@drawable/empty_logo"
+            app:siSquare="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="3"
+                android:paddingTop="20dp"
+                >
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/shop_name"
+                    android:textStyle="bold"
+                    android:text="辉记关东煮辉记关东煮"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/shop_status"
+                    android:layout_height="25dp"
+                    android:layout_width="wrap_content"
+                    android:text="未营业"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp"
+                    android:background="@drawable/shape_rounded_rectangle_tv"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                android:paddingBottom="20dp"
+                >
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/waiter_name"
+                    android:text="黄伟平"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/white"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chart_bar"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="数据统计"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="clipboard_text"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="流水订单"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="account_star_variant"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="会员卡券"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="server"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="餐牌管理"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="run"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="活动管理"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="settings"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="设置"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/test_401"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="android"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="401"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/toolbar_black"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

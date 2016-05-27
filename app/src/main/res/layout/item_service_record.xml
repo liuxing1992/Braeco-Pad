@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@color/background_gray"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/order_id"
+                    android:text="9999"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right|center_vertical"
+                    />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/pay_type"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@android:color/white"
+                        android:text="微信支付"
+                        android:padding="3dp"
+                        android:textSize="12sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@android:color/black"
+                        android:text="2015/09/22 12:22:28"
+                        android:textSize="15sp"
+                        />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center">
+
+                    <View
+                        android:layout_marginTop="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/expandable_layout_button"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.braeco.braecowaiter.UIs.ExpandableLayout
+                android:id="@+id/expandable_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:nbContentLayout="@layout/item_service_record_content"
+                android:background="@android:color/white"
+                />
+
+            <TextView
+                android:layout_height="1sp"
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:paddingTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/black"
+                    android:text="总计"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="left|center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/price_color"
+                    android:text="¥16"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical|left"
+                    android:gravity="right|center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="1sp"
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:paddingTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/refund"
+                    android:layout_height="30dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:orientation="horizontal"
+                    android:background="@drawable/button_refund"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_gravity="center_vertical|left"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/position"
+                android:text="11"
+                android:textColor="@android:color/black"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

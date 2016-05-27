@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:table="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <FrameLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="chevron_left"
+                app:materialIconColor="@color/white"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="日结"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_text_size"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="销量排行"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/gray"
+        />
+
+    <FrameLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fragment_me_tab_title"
+                android:text="版本更新"
+                android:gravity="center_vertical|center"
+                />
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="calendar"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/empty_tip"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="无数据"
+            android:gravity="center"
+            />
+
+        <de.codecrafters.tableview.SortableTableView
+            android:id="@+id/table"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            table:columnCount="3"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

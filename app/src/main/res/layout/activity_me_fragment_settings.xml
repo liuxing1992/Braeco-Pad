@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_gray"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="chevron_left"
+                app:materialIconColor="@color/white"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_text_size"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="修改密码"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="消息提醒"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/print"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="打印设置"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="使用帮助"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="意见反馈"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fragment_me_tab_title"
+                android:text="版本更新"
+                android:paddingLeft="20dp"
+                android:gravity="center_vertical"
+                />
+
+            <me.gujun.android.taggroup.TagGroup
+                android:id="@+id/update_enable"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                app:atg_backgroundColor="@color/red"
+                app:atg_borderColor="@color/red"
+                app:atg_textColor="@color/white"
+                app:atg_textSize="10sp"
+                />
+
+        </FrameLayout>
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/call"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="联系客服"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/custom_service_phone"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="林先生"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linearlayout_logout"
+        android:clickable="true"
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="退出登录"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/background_gray"
+    >
+
+    <TextView
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical|left"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/section"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical|left"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="15dip"
+        android:textColor="@android:color/black"
+        android:text="品类一"
+        />
+
+</FrameLayout>

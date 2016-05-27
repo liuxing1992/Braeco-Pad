@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        app:nbTitleText="套餐设置"
+        app:nbEditText="编辑"
+        />
+
+    <FrameLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:id="@+id/buttons"
+            >
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/sale"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="恢复/暂停售卖"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_sale"
+                />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/change"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="移动"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_sure"
+                />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/delete"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="删除"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_delete"
+                />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/betop"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="置顶"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_be_top"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

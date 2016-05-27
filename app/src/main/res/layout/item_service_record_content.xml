@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_height="1sp"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:paddingTop="5dp"
+        />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        >
+
+        <TextView
+            android:id="@+id/table_id"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="堂食8号桌"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center_vertical"
+            android:text="手机号：18819481260"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="1sp"
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:paddingTop="5dp"
+        />
+
+    <TextView
+        android:layout_height="5dp"
+        android:layout_width="match_parent"
+        />
+
+    <com.braeco.braecowaiter.ExpandedListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/order_divider_height"
+        android:scrollbars="none"
+        />
+
+    <TextView
+        android:layout_height="5dp"
+        android:layout_width="match_parent"
+        />
+
+</LinearLayout>

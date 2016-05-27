@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleLayout">
+
+        <attr name="nbBackText" format="string|reference"/>
+        <attr name="nbTitleText" format="string|reference"/>
+        <attr name="nbEditText" format="string|reference"/>
+        <attr name="nbHasBackText" format="boolean|reference"/>
+        <attr name="nbHasTitleText" format="boolean|reference"/>
+        <attr name="nbHasEditText" format="boolean|reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="nbHeaderLayout" format="reference"/>
+        <attr name="nbContentLayout" format="reference" />
+        <attr name="nbDuration" format="integer" />
+    </declare-styleable>
+
+</resources>

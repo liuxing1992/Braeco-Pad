@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="bottom|center_horizontal"
+        android:text="2015"
+        android:textSize="10sp"
+        android:layout_marginBottom="3dp"
+        />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv0"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="一月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="二月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="三月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="四月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="五月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:text="六月"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

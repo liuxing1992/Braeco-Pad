@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <net.steamcrafted.materialiconlib.MaterialIconView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:materialIcon="clipboard_outline"
+        app:materialIconColor="@color/black"
+        app:materialIconSize="60dp"
+        android:layout_margin="10dp"
+        android:scaleType="center"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        />
+
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="新建套餐"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical|left"
+        />
+
+    <net.steamcrafted.materialiconlib.MaterialIconView
+        android:id="@+id/icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:materialIcon="chevron_right"
+        app:materialIconColor="@color/black"
+        app:materialIconSize="24dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="center"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        />
+
+</LinearLayout>

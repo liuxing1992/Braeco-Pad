@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        app:nbBackText="我的"
+        app:nbTitleText="活动管理"
+        />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                >
+
+                <FrameLayout
+                    android:id="@+id/shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/selector_linear_layout"
+                    android:clickable="true"
+                    >
+
+                    <com.daimajia.slider.library.SliderLayout
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        custom:pager_animation="Accordion"
+                        custom:auto_cycle="true"
+                        custom:indicator_visibility="visible"
+                        custom:pager_animation_span="1100"
+                        android:layout_height="200dp"/>
+
+                    <com.daimajia.slider.library.Indicators.PagerIndicator
+                        android:id="@+id/custom_indicator"
+                        style="@style/AndroidImageSlider_Corner_Oval_Orange"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/empty_tip"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:text="点击添加图片"
+                        android:gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.braeco.braecowaiter.ExpandedListView
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:footerDividersEnabled="true"
+                        />
+
+                    <com.dd.CircularProgressButton
+                        android:id="@+id/reload"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        app:cpb_textComplete="载入活动成功"
+                        app:cpb_textError="载入活动失败，点击重新载入"
+                        app:cpb_textIdle="点击载入活动"
+                        app:cpb_selectorIdle="@drawable/button_load_menu"
+                        app:cpb_colorIndicator="@color/primaryYellow"
+                        app:cpb_colorIndicatorBackground="@color/background_gray"
+                        app:cpb_colorProgress="@color/white"
+                        app:cpb_selectorComplete="@drawable/button_load_menu"
+                        app:cpb_selectorError="@drawable/button_load_menu"
+                        app:cpb_cornerRadius="40dp"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

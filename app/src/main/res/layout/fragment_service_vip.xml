@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/search_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:materialIcon="account_search"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@color/white"
+            android:layout_gravity="center_vertical"
+            />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入至少6位手机号进行搜索"
+            android:inputType="numberDecimal"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/sort"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:materialIcon="sort"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@color/white"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/recyclerview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_empty="@layout/fragment_service_vip_empty"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        app:layout_moreProgress="@layout/progress"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="insideOverlay"
+        android:background="@color/background_gray"
+        />
+
+</LinearLayout>

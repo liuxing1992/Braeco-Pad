@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="70dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/ly1"
+                android:layout_height="@dimen/attribute_height"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/black"
+                    android:text="子项集合修改"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/data1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:text="20款"
+                    android:ellipsize="end"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/black"
+                    app:materialIconSize="24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_divider"
+                />
+
+            <LinearLayout
+                android:id="@+id/ly2"
+                android:layout_height="@dimen/attribute_height"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/black"
+                    android:text="任选个数"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/data2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:text="N选1"
+                    android:ellipsize="end"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/black"
+                    app:materialIconSize="24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_divider"
+                />
+
+            <LinearLayout
+                android:id="@+id/ly3"
+                android:layout_height="@dimen/attribute_height"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:textColor="@color/black"
+                    android:text="优惠折扣"
+                    android:ellipsize="end"
+                    />
+
+                <TextView
+                    android:id="@+id/data3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/black"
+                    android:text="原价"
+                    android:ellipsize="end"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/black"
+                    app:materialIconSize="24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_divider"
+        android:layout_marginLeft="60dp"
+        />
+
+</LinearLayout>

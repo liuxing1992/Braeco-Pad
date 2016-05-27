@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="chevron_left"
+                app:materialIconColor="@color/white"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_text_size"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日结"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+        <TextView
+            android:id="@+id/print"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="打印小票"
+            android:gravity="center"
+            android:textColor="@color/primaryYellow"
+            android:textSize="@dimen/action_bar_title_text_size"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:background="@color/gray"
+        />
+
+    <FrameLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fragment_me_tab_title"
+                android:text=""
+                android:gravity="center_vertical|center"
+                />
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="calendar"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingBottom="4dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        app:stl_dividerColor="@color/colorPrimary"
+        app:stl_defaultTabTextColor="@android:color/white"
+        app:stl_distributeEvenly="true"
+        app:stl_indicatorColor="@color/colorPrimary"
+        app:stl_indicatorCornerRadius="1.5dp"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="3dp"
+        app:stl_underlineColor="@android:color/transparent"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/viewpagertab"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <FrameLayout
+            android:id="@+id/day"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <TextView
+                android:text="日结"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_gravity="bottom|center_horizontal"
+                />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_height="24dp"
+            android:layout_width="0.5dip"
+            android:layout_gravity="center_vertical"
+            android:background="@color/black"
+            />
+
+        <FrameLayout
+            android:id="@+id/week"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <TextView
+                android:text="周结"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_gravity="bottom|center_horizontal"
+                />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_height="24dp"
+            android:layout_width="0.5dip"
+            android:layout_gravity="center_vertical"
+            android:background="@color/black"
+            />
+
+        <FrameLayout
+            android:id="@+id/month"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+            <TextView
+                android:text="月结"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_gravity="bottom|center_horizontal"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

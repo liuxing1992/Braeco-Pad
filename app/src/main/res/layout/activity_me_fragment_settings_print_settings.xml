@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        app:nbEditText="完成"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/separate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="receipt"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="打印方式"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/separate_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="所有餐品合并一票"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="view_column"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="打印联数"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/page_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="每单一联"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/width"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="ruler"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="纸张宽度"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/width_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="58mm"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/size"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="format_size"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="字号大小"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/size_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="18"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/offset"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="resize_bottom_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="偏移量调节"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/offset_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="0"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="pencil"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="备注"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/remark_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="杯口-无切刀"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/meal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="food"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="允许被打印的餐品"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_me_tab_height"
+                android:background="@drawable/selector_linear_layout"
+                android:clickable="true"
+                android:layout_marginTop="15dp"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="apps"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/fragment_me_tab_title"
+                    android:text="允许被打印的桌号"
+                    android:gravity="center_vertical"
+                    />
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_right"
+                    app:materialIconColor="@color/toolbar_black"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303030</color>
+    <color name="colorPrimaryPress">#774422</color>
+    <color name="colorPrimaryDark">#303030</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="disable_gray">#F6F6F6</color>
+    <color name="gray">#C1C1C1</color>
+    <color name="press_gray">#D9D9D9</color>
+    <color name="background_gray">#F1F1F1</color>
+    <color name="yellow">#ffc107</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_red">#FF6644</color>
+    <color name="red">#F44336</color>
+    <color name="dark_red">#D32F2F</color>
+
+    <!--<style name="Guanzhao Style"/>-->
+    <color name="deepCoffeeColor">#910012</color>
+    <color name="borderColor1">#C8C7CC</color>
+    <color name="touchColor">#FFF5D6</color>
+    <color name="homePageBackgroundColor">#FFFCF6</color>
+    <color name="coffeeColor">#8B572A</color>
+    <color name="greyColor">#E3E3E3</color>
+    <color name="centreGreyColor">#C8C7CC</color>
+    <color name="deepGreyColor">#818181</color>
+    <color name="EXPFullBarBackgoundColor">#EFEFF4</color>
+    <color name="orangeColor">#FFC107</color>
+    <color name="borderColor2">#979797</color>
+    <color name="lightGreyColor">#9B9B9B</color>
+    <color name="deepRedColor">#D0021B</color>
+    <color name="redDishOrangeColor">#F58623</color>
+
+    <!--<style name="dingding"></style>-->
+    <color name="primaryYellow">#ffc107</color>
+    <color name="primaryBrown">#8b572a</color>
+    <color name="price_color">#910012</color>
+    <color name="background_color">#F1F1F1</color>
+    <color name="refund_button">#CEBCB0</color>
+    <color name="refund_button_pressed">#AF9F95</color>
+    <color name="n_refund">#F0E9E4</color>
+    <color name="deal_button">#FFC107</color>
+    <color name="deal_button_pressed">#FFB300</color>
+    <color name="icon_gray">#C8C7CC</color>
+    <color name="icon_light">#FFC107</color>
+    <color name="login_background">#FEC006</color>
+    <color name="login_divider">#E3E3E5</color>
+    <color name="toolbar_black">#303030</color>
+    <color name="orange">#F58623</color>
+    <color name="blue">#07AAFF</color>
+    <color name="dark_blue">#0080c2</color>
+    <color name="green">#7ED321</color>
+    <color name="add">#FFC107</color>
+    <color name="minus">#CEBCB0</color>
+    <color name="meal_sale">#D0021B</color>
+    <color name="meal_tag">#F58623</color>
+    <color name="attributes">#CEBCB0</color>
+    <color name="listview_divider">#D4D4D4</color>
+    <color name="refunding_or_refunded">#AF9F95</color>
+
+</resources>

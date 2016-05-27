@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.braeco.braecowaiter">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".BraecoWaiterApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/braeco_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentShop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentVip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentSettingsPassword"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".ServiceMenuFragmentCar"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceMenuFragmentCarMakeSure"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentShopTime"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MeFragmentSettingsRemind"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceVipFragmentInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DayGoodsList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ServiceMenuFragmentCarMakeSureAlipay"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MeFragmentVipDiscount" />
+        <activity android:name=".MeFragmentVipDiscountOver" />
+        <activity android:name=".MeFragmentShopPicture" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".MeFragmentMenuMenu" />
+        <activity android:name=".MeFragmentMenuMenuEdit" />
+        <activity android:name=".MeFragmentMenuMenuEditAttribute" />
+        <activity android:name=".MeFragmentActivityThemeEdit" />
+        <activity android:name=".EditDetailActivity" />
+        <activity
+            android:name=".MeFragmentActivityReduceGiveOtherEdit"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".SingleRefundActivity"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".MeFragmentMenuEdit" />
+        <activity android:name=".MeFragmentMenuSet" />
+        <activity android:name=".MeFragmentMenuSetEdit" />
+        <activity android:name=".MeFragmentMenuSetEditAttribute" />
+        <activity android:name=".MeFragmentMenuSetEditAttributeCombo" />
+        <activity android:name=".ServiceMenuFragmentSet" />
+        <activity android:name=".ServiceMenuFragmentCarMakeSureWechatPay" />
+        <activity android:name=".MeFragmentSettingsPrint" />
+        <activity android:name=".MeFragmentSettingsPrintSettings" />
+        <activity android:name=".MeFragmentSettingsPrintSettingsMeal" />
+        <activity android:name=".MeFragmentSettingsPrintSettingsTable" />
+        <activity android:name=".SignOutDialogActivity" android:theme="@style/Theme.Transparent"/>
+    </application>
+
+</manifest>

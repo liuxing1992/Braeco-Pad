@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                />
+
+            <com.hb.views.PinnedSectionListView
+                android:id="@+id/menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/white"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <ListView
+            android:id="@+id/category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:scrollbars="none"
+            android:background="@color/background_gray"
+            android:divider="@null"
+            />
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/car_fy"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/car"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|left"
+            android:src="@drawable/shopping_car"
+            />
+
+        <TextView
+            android:id = "@+id/num"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_gravity="top|right"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tips_textview_bg"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="13dip"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/empty_tip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/background_gray"
+        >
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/reload"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            app:cpb_textComplete="载入菜单成功"
+            app:cpb_textError="载入菜单失败，点击重新载入"
+            app:cpb_textIdle="载入菜单失败，点击重新载入"
+            app:cpb_selectorIdle="@drawable/button_load_menu"
+            app:cpb_colorIndicator="@color/primaryYellow"
+            app:cpb_colorIndicatorBackground="@color/background_gray"
+            app:cpb_colorProgress="@color/white"
+            app:cpb_selectorComplete="@drawable/button_load_menu"
+            app:cpb_selectorError="@drawable/button_load_menu"
+            app:cpb_cornerRadius="40dp"
+            />
+
+    </FrameLayout>
+
+</FrameLayout>

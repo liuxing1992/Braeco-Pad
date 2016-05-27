@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        app:nbTitleText="被打印的桌位"
+        app:nbEditText="完成"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/all"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center|right"
+                    >
+
+                    <TextView
+                        android:id="@+id/all_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全选"
+                        android:layout_gravity="center_vertical"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        />
+
+                    <com.github.lguipeng.library.animcheckbox.AnimCheckBox
+                        android:id="@+id/check"
+                        android:layout_gravity="center|right"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:stroke_width="1dp"
+                        app:stroke_color="@color/colorPrimary"
+                        app:circle_color="@color/background_gray"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/listDivider" />
+
+            <com.braeco.braecowaiter.ExpandedGridView
+                android:id="@+id/grid_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_gray"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:layout_gravity="center"
+                android:verticalSpacing="1dp"
+                android:overScrollMode="never"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                app:materialIcon="coffee"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id"
+                android:text="18819481260"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:gravity="left|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                app:materialIcon="phone"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:text="18819481260"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:gravity="left|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                app:materialIcon="star"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/level"
+                android:text="LV.0"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                app:materialIcon="rocket"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员积分："
+                android:textColor="@android:color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp"
+                android:gravity="left|center_vertical"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/exp"
+                android:text="12312312"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:gravity="left|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                app:materialIcon="bank"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额："
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="left|center_vertical"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/balance"
+                android:text="¥ 1233"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:gravity="left|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:text="123123123123123123123"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

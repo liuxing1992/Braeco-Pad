@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray">
+
+        <LinearLayout
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <FrameLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/sum_fy"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <View
+                    android:id="@+id/selector1"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/button_triangle"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/sum"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimary"
+                    android:text="0"
+                    android:textSize="30sp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="有效订单"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_height="60dp"
+                android:layout_width="0.3sp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                />
+
+            <FrameLayout
+                android:id="@+id/best_fy"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <View
+                    android:id="@+id/selector2"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:background="@drawable/button_triangle"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <me.grantland.widget.AutofitTextView
+                    android:id="@+id/best"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textSize="30sp"
+                    autofit:minTextSize="16sp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="营业总额"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/line"
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+
+            <lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/chart"
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/empty_tip"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="暂无数据"
+                />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/color"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <View
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="#33B5E5"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="营业总额"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <View
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="#99CC00"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:text="手续费"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

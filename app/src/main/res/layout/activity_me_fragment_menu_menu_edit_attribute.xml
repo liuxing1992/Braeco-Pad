@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <FrameLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="属性与差价"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+        <LinearLayout
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_left"
+                    app:materialIconColor="@color/white"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/back_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/action_bar_text_size"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_title_text_size"
+                />
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="@color/primaryYellow"
+                android:textSize="@dimen/action_bar_title_text_size"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        />
+
+</LinearLayout>

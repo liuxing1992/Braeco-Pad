@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_gray">
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        app:nbBackText="活动"
+        app:nbTitleText="活动修改"
+        app:nbEditText="完成"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="48dp"
+                >
+
+                <FrameLayout
+                    android:layout_height="200dp"
+                    android:layout_width="match_parent"
+                    >
+
+                    <com.flaviofaria.kenburnsview.KenBurnsView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        />
+
+                    <TextView
+                        android:id="@+id/empty_tip"
+                        android:layout_height="200dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:text="点击添加活动图片"
+                        />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_me_tab_height"
+                    android:background="@drawable/selector_linear_layout"
+                    android:clickable="true"
+                    >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="*活动标题"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/name_text"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆腐臭豆"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical|right"
+                        />
+
+                    <net.steamcrafted.materialiconlib.MaterialIconView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        app:materialIcon="chevron_right"
+                        app:materialIconColor="@color/colorPrimary"
+                        app:materialIconSize="24dp"
+                        android:scaleType="center"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_me_tab_height"
+                    android:background="@drawable/selector_linear_layout"
+                    android:clickable="true"
+                    android:layout_marginTop="0.5dp"
+                    >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="*持续时间"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="¥10.00"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical|right"
+                        />
+
+                    <net.steamcrafted.materialiconlib.MaterialIconView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        app:materialIcon="chevron_right"
+                        app:materialIconColor="@color/colorPrimary"
+                        app:materialIconSize="24dp"
+                        android:scaleType="center"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/more"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_me_tab_height"
+                    android:background="@drawable/selector_linear_layout"
+                    android:clickable="true"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="*详情介绍"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/more_text"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text=""
+                        android:paddingLeft="20dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical|right"
+                        />
+
+                    <net.steamcrafted.materialiconlib.MaterialIconView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        app:materialIcon="chevron_right"
+                        app:materialIconColor="@color/colorPrimary"
+                        app:materialIconSize="24dp"
+                        android:scaleType="center"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_me_tab_height"
+                    android:background="@drawable/selector_linear_layout"
+                    android:clickable="true"
+                    android:layout_marginTop="15dp"
+                    >
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text="*活动详情"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/detail_type"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/fragment_me_tab_title"
+                        android:text=""
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical|right"
+                        />
+
+                    <net.steamcrafted.materialiconlib.MaterialIconView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        app:materialIcon="plus"
+                        app:materialIconColor="@color/colorPrimary"
+                        app:materialIconSize="24dp"
+                        android:scaleType="center"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+                <com.braeco.braecowaiter.ExpandedListView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:id="@+id/detail_list"
+                    android:dividerHeight="0.5dp"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_marginBottom="60dp"
+                    />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="删除活动"
+            android:textColor="@color/white"
+            android:background="@drawable/button_delete"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

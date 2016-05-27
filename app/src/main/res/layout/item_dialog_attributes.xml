@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false">
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        />
+
+    <me.gujun.android.taggroup.TagGroup
+        android:id="@+id/tags"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:atg_isAppendMode="false"
+        app:atg_backgroundColor="@android:color/transparent"
+        app:atg_checkedMarkerColor="@color/attributes"
+        app:atg_checkedBorderColor="@color/attributes"
+        app:atg_checkedTextColor="@color/attributes"
+        app:atg_checkedBackgroundColor="@android:color/transparent"
+        app:atg_pressedBackgroundColor="@android:color/transparent"
+        app:atg_borderColor="@color/attributes"
+        app:atg_textColor="@color/black"
+        app:atg_textSize="17sp"
+        />
+
+</LinearLayout>

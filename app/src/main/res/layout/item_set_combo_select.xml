@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/combo"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        >
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:text="10寸披萨"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="120dp"
+            app:minTextSize="14sp"
+            />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:text="*1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="50dp"
+            app:minTextSize="14sp"
+            />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/selected"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:text="已选1款"
+            android:ellipsize="end"
+            />
+
+        <RelativeLayout
+            android:id="@+id/button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <View
+                android:layout_marginTop="8dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/expandable_layout_button"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5sp"
+        android:background="?android:attr/listDivider" />
+
+    <com.braeco.braecowaiter.UIs.ExpandableLayout
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:nbContentLayout="@layout/item_set_combo_select_content"
+        />
+
+</LinearLayout>

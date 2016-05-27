@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal"
+            >
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="chevron_left"
+                app:materialIconColor="@color/white"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_text_size"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="门店信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/shop"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        >
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            custom:pager_animation="Accordion"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation_span="1100"
+            android:layout_height="200dp"/>
+
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            style="@style/AndroidImageSlider_Corner_Oval_Orange"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/empty_tip"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:text="点击添加图片"
+            android:gravity="center"
+            />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="查看门店"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="餐厅名称"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/show_name"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text=""
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="地址"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/show_address"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text=""
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="联系方式"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/show_phone"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text=""
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment_me_tab_height"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fragment_me_tab_title"
+            android:text="营业时段"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            />
+
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:materialIcon="chevron_right"
+            app:materialIconColor="@color/colorPrimary"
+            app:materialIconSize="24dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

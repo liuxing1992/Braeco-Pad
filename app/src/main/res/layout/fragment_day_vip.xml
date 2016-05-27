@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_gray">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_gray">
+
+            <LinearLayout
+                android:layout_height="80dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/vipNumber"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <View
+                        android:id="@+id/selector1"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        android:background="@drawable/button_triangle"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <TextView
+                        android:id="@+id/sum"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/colorPrimary"
+                        android:text="0"
+                        android:textSize="30sp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:text="新增会员"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_height="60dp"
+                    android:layout_width="0.3sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/vipCharge"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <View
+                        android:id="@+id/selector2"
+                        android:layout_height="20dp"
+                        android:layout_width="20dp"
+                        android:background="@drawable/button_triangle"
+                        android:layout_gravity="center_horizontal"
+                        />
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/best"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:textSize="30sp"
+                        autofit:minTextSize="16sp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:text="0"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:text="会员充值"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/chart"
+                    android:layout_height="300dp"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_height="50dp"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/empty_tip"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.braeco.braecowaiter.UIs.TitleLayout
+        android:id="@+id/title_layout"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        app:nbTitleText="流水订单"
+        app:nbBackText="我的"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/selector_linear_layout"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        >
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/fragment_me_tab_title"
+                android:text="版本更新"
+                android:gravity="center_vertical|center"
+                />
+
+            <net.steamcrafted.materialiconlib.MaterialIconView
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                app:materialIcon="calendar"
+                app:materialIconColor="@color/colorPrimary"
+                app:materialIconSize="24dp"
+                android:scaleType="center"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/recyclerview"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_empty="@layout/activity_me_fragment_order_empty"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        app:layout_moreProgress="@layout/progress"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="insideOverlay"
+        android:background="@color/background_gray"
+        />
+
+</LinearLayout>

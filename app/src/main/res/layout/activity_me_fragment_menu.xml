@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.braeco.braecowaiter.MeFragmentShop"
+    android:orientation="vertical"
+    android:background="@color/background_gray">
+
+    <FrameLayout
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="餐牌管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            />
+
+        <LinearLayout
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal"
+                >
+
+                <net.steamcrafted.materialiconlib.MaterialIconView
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    app:materialIcon="chevron_left"
+                    app:materialIconColor="@color/white"
+                    app:materialIconSize="24dp"
+                    android:scaleType="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="我的"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/action_bar_text_size"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_title_text_size"
+                />
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/primaryYellow"
+                android:textSize="@dimen/action_bar_title_text_size"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.braeco.braecowaiter.UIs.ObservableScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/tea_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:visibility="gone"
+                            >
+
+                            <LinearLayout
+                                android:layout_height="80dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:text="*茶位设置"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:gravity="bottom|left"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginBottom="3dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tea_number"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:text="茶位项：3"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:gravity="top|left"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="3dp"
+                                    />
+
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_width="80dp"
+                                >
+
+                                <net.steamcrafted.materialiconlib.MaterialIconView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    app:materialIcon="chevron_right"
+                                    app:materialIconColor="@color/black"
+                                    app:materialIconSize="24dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:scaleType="center"
+                                    android:background="@android:color/transparent"
+                                    android:layout_gravity="center_vertical"
+                                    />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/listDivider"
+                            android:visibility="gone"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/set_layout"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:visibility="gone"
+                            >
+
+                            <LinearLayout
+                                android:layout_height="80dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:text="*套餐设置"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:gravity="bottom|left"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginBottom="3dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/set_number"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_width="match_parent"
+                                    android:text="套餐数：3"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/black"
+                                    android:gravity="top|left"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="3dp"
+                                    />
+
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_height="48dp"
+                                android:layout_gravity="center"
+                                android:layout_width="80dp"
+                                >
+
+                                <net.steamcrafted.materialiconlib.MaterialIconView
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    app:materialIcon="chevron_right"
+                                    app:materialIconColor="@color/black"
+                                    app:materialIconSize="24dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:scaleType="center"
+                                    android:background="@android:color/transparent"
+                                    android:layout_gravity="center_vertical"
+                                    />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/listDivider"
+                        android:visibility="gone"
+                        />
+
+                    <com.braeco.braecowaiter.ExpandedListView
+                        android:id="@+id/list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="19dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center|right"
+                        android:layout_marginBottom="60dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/all_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全选"
+                            android:layout_gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            />
+
+                        <com.github.lguipeng.library.animcheckbox.AnimCheckBox
+                            android:id="@+id/check"
+                            android:layout_gravity="center|right"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:stroke_width="1dp"
+                            app:stroke_color="@color/colorPrimary"
+                            app:circle_color="@color/background_gray"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.braeco.braecowaiter.UIs.ObservableScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_height="60dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:id="@+id/buttons"
+            >
+
+            <TextView
+                android:id="@+id/change"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="修改"
+                android:textColor="@color/white"
+                android:background="@drawable/button_sure"
+                />
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:background="@drawable/button_delete"
+                />
+
+            <TextView
+                android:id="@+id/betop"
+                android:layout_height="48dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="置顶"
+                android:textColor="@color/white"
+                android:background="@drawable/button_be_top"
+                />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/empty_tip"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            >
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/reload"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:cpb_textComplete="载入菜单成功"
+                app:cpb_textError="载入菜单失败，点击重新载入"
+                app:cpb_textIdle="点击载入菜单"
+                app:cpb_selectorIdle="@drawable/button_load_menu"
+                app:cpb_colorIndicator="@color/primaryYellow"
+                app:cpb_colorIndicatorBackground="@color/background_gray"
+                app:cpb_colorProgress="@color/white"
+                app:cpb_selectorComplete="@drawable/button_load_menu"
+                app:cpb_selectorError="@drawable/button_load_menu"
+                app:cpb_cornerRadius="40dp"
+                />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

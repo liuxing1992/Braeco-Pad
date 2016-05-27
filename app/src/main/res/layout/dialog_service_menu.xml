@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_height="250dp"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:dividerHeight="5dp"
+        />
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        >
+
+        <TextView
+            android:id="@+id/choice"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="233333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333"
+            android:gravity="center_vertical|left"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|bottom"
+                android:text="¥"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:gravity="bottom"
+                android:layout_marginBottom="1.5dip"
+                android:textColor="@color/price_color"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|left"
+                android:text="8989"
+                android:textColor="@color/price_color"
+                android:textSize="25sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
